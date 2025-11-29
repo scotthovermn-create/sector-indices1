@@ -12,7 +12,7 @@ os.makedirs("docs", exist_ok=True)
 # === 5 SECTOR INDICES ===
 indices = {
     "Gold Miners": {
-        "tickers": ["NEM", "AEM", "GOLD", "KGC", "AU", "SSRM", "FNV", "WPM", "RGLD", "AGI"],
+        "tickers": ["NEM", "AEM", "B", "KGC", "AU", "SSRM", "FNV", "WPM", "RGLD", "AGI"],
         "color": "#FFD700"
     },
     "Crypto Stocks": {
