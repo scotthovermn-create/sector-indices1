@@ -95,4 +95,4 @@ print("\n=== 1-YEAR PERFORMANCE SUMMARY ===")
 for item in sorted(performance_summary, key=lambda x: float(x["1Y Return"][:-1]), reverse=True):
     print(f"{item['Sector']}: {item['1Y Return']} → {item['Final Value']}")
 
-print("\nDashboard live at: https://YOURUSERNAME.github.io/sector-indices/")
+print("\nDashboard live at: https://scotthovermn-create.github.io/sector-indices/")
