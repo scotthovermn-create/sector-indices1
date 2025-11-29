@@ -1,1 +1,26 @@
+name: Daily Sector Update
+on:
+  schedule:
+    - cron: '0 21 * * *'   # Every day at 9 PM UTC
+  workflow_dispatch:
 
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install yfinance pandas plotly
+      - name: Run update
+        run: python update_indices.py
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/*
+          git commit -m "Daily sector update $(date +'%Y-%m-%d')" || exit 0
+          git push
