@@ -177,7 +177,8 @@ fig.add_annotation(
            
 
 # Save files
-fig.write_html("docs/index.html", include_plotlyjs="cdn")
+fig.write_html("docs/index.html", include_plotlyjs=True)
+#fig.write_html("docs/index.html", include_plotlyjs="cdn")
 
 with open("docs/data.json", "w") as f:
     import json
