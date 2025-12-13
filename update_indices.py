@@ -177,7 +177,10 @@ fig.add_annotation(
            
 
 # Save files
-fig.write_html("docs/index.html", include_plotlyjs="https://cdn.plot.ly/plotly-2.35.2.min.js")
+fig.write_html("docs/index.html", include_plotlyjs="https://cdn.plot.ly/plotly-latest.min.js")
+
+
+#               "https://cdn.plot.ly/plotly-2.35.2.min.js")
 #fig.write_html("docs/index.html", include_plotlyjs=True)
 #fig.write_html("docs/index.html", include_plotlyjs="cdn")
 
